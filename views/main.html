@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Dani Martinez Developer</title>
+
+  <meta name="author" content="Dani Martinez">
+  <meta property="og:url" content="http://localhost:3000"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Dani Martinez"/>
+  <meta property="og:description" content="Dani Martinez is a web developer and pizza lover base in Barcelona - Spain."/>
+  <meta property="og:image" content="http://localhost:3000/img/dani-martinez-developer.jpg"/>
+
+  <meta name="description" content="Dani Martinez Developer"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/jquery-fatNav/dist/jquery.fatNav.min.css"/>
+  <link rel="stylesheet" href="bower_components/bxslider-4/jquery.bxslider.css"/>
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <!-- endbower -->
+
+  <link rel="stylesheet" href="css/app.css"/>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top bg-faded">
+    <div class="container">
+
+      <div class="fat-nav">
+        <div class="fat-nav__wrapper"><!-- cloned navbar --></div>
+      </div>
+
+      <a class="navbar-brand page-scroll" href="/">Dani Martinez</a>
+
+      <div class="collapse navbar-toggleable-sm clearfix">
+        <ul class="nav navbar-nav pull-md-right">
+          <li class="nav-item"><a class="nav-link active" href data-scroll-to="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href data-scroll-to="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href data-scroll-to="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href data-scroll-to="#contact">Contact</a></li>
+          <li class="nav-item"><span id="visible-items"></span></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  {{{ body }}}
+  
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="bower_components/jquery-fatNav/dist/jquery.fatNav.min.js"></script>
+  <script src="bower_components/bxslider-4/jquery.bxslider.js"></script>
+  <script src="bower_components/particles.js/particles.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/tether/dist/js/tether.js"></script>
+  <script src="bower_components/typed.js/dist/typed.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endbower -->
+  
+  <script src="js/app.bundle.js"></script>
+
+</body>
+</html>

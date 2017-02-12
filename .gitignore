@@ -1,0 +1,11 @@
+# System
+.DS_Store
+node_modules
+bower_components
+*.log
+
+# Dynamics
+.tmp/*
+build/*
+public/css/*.css
+public/js/*.js

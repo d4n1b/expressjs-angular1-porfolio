@@ -1,0 +1,24 @@
+<div class="container" ng-controller="PortfolioController">
+  
+  <div class="parallax section-bg section-bg--portfolio"></div>
+  
+  <p class="title">Portfolio</p>
+
+  <div class="divider"></div>
+
+  <p class="subtitle">In the below projects I had opportunity to participate in their development.
+  In different projects I was working as Software Engineer, Scrum Master or Co-Founder.
+  The below trademarks belongs to their owners and their presentation
+  is only for information reason.</p>
+
+  <div class="projects-container">
+    <div ng-repeat="project in projects" class="project col-xs-12 col-md-6 col-lg-4">
+      <a href="{{ project.link }}" target="_blank" ng-mouseenter="maskBg={ backgroundColor: project.bg }" ng-mouseleave="maskBg={}">
+        <img ng-src="{{ project.img }}">
+        <div class="mask" ng-style="maskBg"></div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+      </a>
+    </div>
+  </div>
+</div>

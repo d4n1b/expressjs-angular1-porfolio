@@ -1,0 +1,118 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 500px;
+}
+
+
+// header
+#main-navbar {
+  height: @header-height;
+  background-color: @header-bg;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  
+  a, button {
+    color: #fff;
+  }
+}
+
+// content
+#main-content {
+  width: 100%;
+  height: 100%;
+}
+
+
+//
+.navbar {
+  a {
+    opacity: 0.5;
+
+    &.active {
+      text-decoration: line-through;
+      opacity: 1;
+    }
+  }
+}
+
+section {
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: @screen-sm) {
+    padding: 10px 15px;
+  }
+}
+
+.tab-selector {
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid red;
+
+  display: inline-block;
+  position: absolute;
+  margin: -75px 0 0 -50px;
+}
+
+.divider {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.required-tag {
+  color: red;
+}
+
+// Collapse sidebar
+.hamburger {
+  top: 10px;
+  left: initial;
+  right: 20px;
+  
+  @media only screen and (min-width: @screen-md) {
+    display: none;
+  }
+
+  .hamburger__icon,
+  .hamburger__icon:before,
+  .hamburger__icon:after {
+    background-color: #fff;
+  }
+}
+
+.section-bg {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  z-index: -1;
+  top: 20px;
+}
+
+section .project img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-bg--user {
+  background: url('/img/sections-user-bg.png');
+  background-size: cover;
+}
+
+.section-bg--portfolio {
+  background: url('/img/sections-portfolio-bg.png');
+  background-size: cover;
+}
+
+.section-bg--contact {
+  background: url('/img/sections-contact-bg.png');
+  background-size: cover;
+}

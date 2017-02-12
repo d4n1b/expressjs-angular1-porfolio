@@ -1,0 +1,87 @@
+section#portfolio {
+  
+  .projects-container {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .project {
+    padding: 5px;
+    position: relative;
+    height: 300px;
+    text-align: right;
+    
+    img, p, h3, .mask {
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    
+    p {
+      -webkit-transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      -ms-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0);
+    }
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      &:hover img {
+        transform: scale(1.3);
+      }
+
+      &:hover .mask {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      
+      &:hover p {
+        bottom: 0;
+      }
+
+      &:hover h3 {
+        top: 0;
+      }
+    }
+
+    img {}
+    
+    h3 {
+      width: 100%;
+      height: 130px;
+      position: absolute;
+      top: -135px;
+      color: #fff;
+      padding: 10px 20px 15px;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 3rem;
+      overflow: hidden;
+    }
+
+    p {
+      width: 100%;
+      height: 45px;
+      position: absolute;
+      bottom: -50px;
+      color: #fff;
+      padding: 10px 20px 15px;
+      margin: 0;
+    }
+  }
+
+}

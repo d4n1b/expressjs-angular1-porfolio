@@ -1,0 +1,118 @@
+<div class="container" ng-controller="ContactController">
+
+  <div class="parallax section-bg section-bg--contact"></div>
+  
+  <p class="title">Contact</p>
+
+  <div class="divider"></div>
+
+  <p class="subtitle">Have a cool project in mind, and think I can help you with it?<br>
+    Feel free to e-mail me at <a href="mailto:hi@danimartinez.rocks">hi@danimartinez.rocks</a>.<br>
+  </p>
+  
+  <div class="row contact-info col-md-6 col-md-offset-3">
+    <div class="col-md-6 location">
+      <a href="https://www.google.co.uk/maps/place/Shoreditch,+London+N1/" target="_blank"><i class="fa fa-map-marker"></i></a>
+      <p>Barcelona, Spain</p>
+    </div><!-- /.col -->
+
+    <div class="col-md-6 social">
+      <a href="https://www.linkedin.com/in/frontend-developer-dani" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+  
+
+  <form id="contactForm" name="contactForm" class="col-md-10 col-md-offset-1 clearfix" role="form">
+
+    <h4>About you</h4>
+    <div class="separator"></div>
+
+    <div class="form-group" ng-class="{ 'has-danger': contactForm.name.$touched && contactForm.name.$error.required }">
+      <label for="">Your name <span class="required-tag">*</span></label>
+      <input name="name" type="text" class="form-control" placeholder="eg. Dani Mart&iacute;nez"
+        ng-model="contactData.name"
+        ng-class="{ 'form-control-danger': contactForm.name.$touched && contactForm.name.$error.required }" required>
+    </div>
+    
+    <div class="form-group" ng-class="{ 'has-danger': contactForm.email.$touched && contactForm.email.$error.required || contactForm.email.$error.email }">
+      <label for="">Email address <span class="required-tag">*</span></label>
+      <input name="email" type="email" class="form-control" placeholder="eg. hi@danimartinez.rocks"
+        ng-model="contactData.email"
+        ng-class="{ 'form-control-danger': contactForm.email.$touched && contactForm.email.$error.required || contactForm.email.$error.email }" required>
+    </div>
+    
+    <div class="form-group">
+      <div class="row">
+        
+        <div class="col-md-6">
+          <label for="">Your website</label><br>
+          <input name="website" type="text" class="form-control" placeholder="eg. danimartinez.rocks"
+            ng-model="contactData.website">
+        </div>
+
+        <div class="col-md-6">
+          <label for="">How did you hear about danimartinez.rocks?</label><br>
+          <input name="referred" type="text" class="form-control" placeholder="eg. Linkedin, Facebook, referred by..., etc"
+            ng-model="contactData.referred">
+        </div>
+      </div>
+    </div>
+    
+
+    <h4>Project Details</h4>
+    <div class="separator"></div>
+
+    <div class="row">
+
+      <div class="form-group col-md-6" ng-class="{ 'has-danger': contactForm.budget.$touched && contactForm.budget.$error.required }">
+        <label for="">Your Budget <span class="required-tag">*</span></label>
+        <input name="budget" type="text" class="form-control" placeholder="eg. &euro;2000"
+          ng-model="contactData.budget"
+          ng-class="{ 'form-control-danger': contactForm.budget.$touched && contactForm.budget.$error.required }" required>
+      </div>
+
+      <div class="form-group col-md-6" ng-class="{ 'has-danger': contactForm.timeline.$touched && contactForm.timeline.$error.required }">
+        <label for="">Ideal start date <span class="required-tag">*</span></label>
+        <select name="timeline" class="form-control"
+          ng-model="contactData.timeline"
+          ng-class="{ 'form-control-danger': contactForm.timeline.$touched && contactForm.timeline.$error.required }" required>
+            <option value="">Please select</option>
+            <option value="Within 1 week">Within 1 week</option>
+            <option value="1 - 2 weeks">1 - 2 weeks</option>
+            <option value="2 - 4 weeks">2 - 4 weeks</option>
+            <option value="1 - 2 months">1 - 2 months</option>
+            <option value="Not sure">Not sure</option>
+        </select>
+      </div>
+
+    </div><!-- /.row -->
+
+    
+    <h4>Project Description</h4>
+    <div class="separator"></div>
+
+    <div class="form-group" ng-class="{ 'has-danger': contactForm.message.$touched && contactForm.message.$error.required }">
+      <label for="">Please briefly describe your project, what you aim to achieve,
+      what you'd like me to do, and link to any appropriate materials
+      (such as PSDs available via Dropbox). <span class="required-tag">*</span></label>
+      <textarea name="message" class="form-control" cols="30" rows="10" placeholder="Message..."
+        ng-model="contactData.message" required>
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <div class="alert" ng-show="hasResponse" role="alert"
+        ng-class="{ 'alert-success': response && response.status, 'alert-danger': response && !response.status }" ng-bind-html="response.data">
+      </div>
+    </div>
+
+    <div class="form-group text-xs-center">
+      <button type="submit" class="btn btn-success btn-lg"
+        ng-click="sendMessage( contactData )"
+        ng-disabled="contactForm.$invalid">Send
+      </button>
+    </div>
+
+  </form>
+
+</div>
